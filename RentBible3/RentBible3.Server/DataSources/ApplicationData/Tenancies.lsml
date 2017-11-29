@@ -33,14 +33,16 @@
           <Required />
           <MaxLength
             Value="255" />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="TenantCode"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="255" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -77,16 +79,18 @@
       </EntityProperty>
       <EntityProperty
         Name="TenancyStartedOn"
-        PropertyType=":DateTime?">
+        PropertyType=":DateTime">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="TenancyEndedOn"
-        PropertyType=":DateTime?">
+        PropertyType=":DateTime">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -100,18 +104,20 @@
       </EntityProperty>
       <EntityProperty
         Name="LessorName"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="255" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="LessorCode"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="255" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -164,6 +170,38 @@
         PropertyType="Microsoft.LightSwitch.Extensions:Image?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TenantId"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LessorId"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TenantSalt"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LessorSalt"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

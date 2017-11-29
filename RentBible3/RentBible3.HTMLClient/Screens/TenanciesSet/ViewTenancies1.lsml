@@ -65,7 +65,7 @@
                 <ContentItem
                   Name="TenancyStartedOn"
                   Kind="Value"
-                  DataType=":DateTime?"
+                  DataType=":DateTime"
                   View="Microsoft.LightSwitch.MobileWeb:Text">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -101,6 +101,23 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="Tenancy/Properties[MyContactDetails]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="TenantId"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Unique Tenant's Id" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Tenancy/Properties[TenantId]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -160,7 +177,7 @@
                 <ContentItem
                   Name="TenancyEndedOn"
                   Kind="Value"
-                  DataType=":DateTime?"
+                  DataType=":DateTime"
                   View="Microsoft.LightSwitch.MobileWeb:Text">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -206,6 +223,23 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="Tenancy/Properties[Created]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="LessorId"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Unique Lessor's Id" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Tenancy/Properties[LessorId]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
