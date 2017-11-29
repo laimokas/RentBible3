@@ -16,4 +16,16 @@
         Target="ServiceInterface:Tenancy" />
     </EntityType.Attributes>
   </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Comments" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Comments_Tenancy" />
+    </Association.Attributes>
+  </Association>
 </Application>

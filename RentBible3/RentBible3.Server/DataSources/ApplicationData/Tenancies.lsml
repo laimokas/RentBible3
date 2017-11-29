@@ -126,7 +126,7 @@
         <EntityProperty.Attributes>
           <Required />
           <MaxLength
-            Value="255" />
+            Value="4000" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -204,6 +204,11 @@
             Value="255" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="CommentsCollection"
+        Association="Comments_Tenancy"
+        FromEnd="Tenancy"
+        ToEnd="Comments" />
       <EntityProperty
         Name="CreatedBy"
         IsReadOnly="True"
@@ -347,5 +352,58 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="Comments_Tenancies"
+      Association="Comments_Tenancy">
+      <AssociationSetEnd
+        Name="Comments"
+        EntitySet="CommentsSet" />
+      <AssociationSetEnd
+        Name="Tenancy"
+        EntitySet="Tenancies" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="Comments_Tenancy">
+    <AssociationEnd
+      Name="Comments"
+      Multiplicity="Many"
+      EntityType="Comments" />
+    <AssociationEnd
+      Name="Tenancy"
+      Multiplicity="One"
+      EntityType="Tenancy">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <AssociationSetMapping
+      AssociationSet="Comments_Tenancies">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Comments_Tenancies" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Comments_Tenancies]/Members[Comments]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Comments_Tenancy" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Comments_Tenancies]/Members[Tenancy]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
 </ServiceApplication>

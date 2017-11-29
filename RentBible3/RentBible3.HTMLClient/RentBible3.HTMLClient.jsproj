@@ -100,6 +100,7 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddEditComments.lsml" />
     <LightSwitchModel Include="Screens\TenanciesSet\AddEditTenancies1.lsml" />
     <LightSwitchModel Include="Screens\TenanciesSet\BrowseTenanciesSet1.lsml" />
     <LightSwitchModel Include="Screens\TenanciesSet\ViewTenancies1.lsml" />
