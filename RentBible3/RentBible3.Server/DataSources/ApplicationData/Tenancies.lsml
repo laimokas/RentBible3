@@ -77,17 +77,15 @@
       </EntityProperty>
       <EntityProperty
         Name="TenancyStartedOn"
-        PropertyType=":DateTime">
+        PropertyType=":DateTime?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="TenancyEndedOn"
-        PropertyType=":DateTime">
+        PropertyType=":DateTime?">
         <EntityProperty.Attributes>
-          <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -102,9 +100,8 @@
       </EntityProperty>
       <EntityProperty
         Name="LessorName"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <Required />
           <MaxLength
             Value="255" />
         </EntityProperty.Attributes>

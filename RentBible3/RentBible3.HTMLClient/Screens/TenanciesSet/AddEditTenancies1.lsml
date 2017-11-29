@@ -86,7 +86,7 @@
                 <ContentItem
                   Name="TenancyStartedOn"
                   Kind="Value"
-                  DataType=":DateTime">
+                  DataType=":DateTime?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -111,7 +111,7 @@
                 <ContentItem
                   Name="LessorName"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Property Owner Name" />
@@ -239,7 +239,7 @@
                 <ContentItem
                   Name="TenancyEndedOn"
                   Kind="Value"
-                  DataType=":DateTime">
+                  DataType=":DateTime?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
