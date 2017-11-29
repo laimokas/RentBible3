@@ -11,7 +11,7 @@ namespace LightSwitchApplication
     {
         partial void Tenancies_Inserted(Tenancy entity)
         {
-            
+             
         }
     }
 }
