@@ -46,3 +46,14 @@ myapp.BrowseTenanciesSet1.AddTenancy_postRender = function (element, contentItem
     //});
     
 };
+myapp.BrowseTenanciesSet1.ABOUT_render = function (element, contentItem) {
+    // Write code here.
+    element.innerHTML = `<p><b>Our Mission:</b></p>
+<p>Make world easier to live in by letting others know about someone's bad behavior or injustice that you have experienced</p>
+<p><b>For Lessors:</b> allow others know about tenants who damaged your property!</p>
+<p><b>For Tenants: </b> allow others know about lessors who tricked you!</p>
+<br/><br/>
+<p>Have questions?</p>
+<p>Want to be a part of this?</p>
+<p><b>Contact us:</b> rentbible@gmail.com</p>`;
+};
